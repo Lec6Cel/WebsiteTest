@@ -17,7 +17,7 @@ class FrontendController extends Controller {
         return view('frontend.home')->with([
            'productList' => $productList,
            'mainClass' => 'hero_area',
-           'title' => 'Trang Chủ - Toan Ha IT',
+           'title' => 'Trang Chủ - TrungNhom',
            'cartNum' => $this->getCartNum(),
         ]);
     }

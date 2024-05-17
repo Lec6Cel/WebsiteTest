@@ -20,7 +20,7 @@
                             On Everything
                          </h1>
                          <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                            Giảm giá tất cả mọi sản phẩm từ thị trường, phá giá cực mạnh @@
                          </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
