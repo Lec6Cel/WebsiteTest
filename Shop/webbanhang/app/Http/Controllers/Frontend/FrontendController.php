@@ -263,4 +263,47 @@ class FrontendController extends Controller {
 
         return redirect()->route('home_index');
     }
+    // public function showLogin()
+    // {
+    //     return view('auth.login')->with([
+    //         'mainClass' => 'sub_page',
+    //         'title' => 'Đăng Nhập',
+    //     ]);
+    // }
+
+    // public function postLogin(Request $request)
+    // {
+    //     $credentials = $request->only('email', 'password');
+    
+    //     if (Auth::attempt($credentials)) {
+    //         Authentication passed...
+    //         return redirect()->intended(route('home_index'));
+    //     }
+    
+    //     return redirect()->back()->withErrors([
+    //         'email' => 'Thông tin đăng nhập không đúng.',
+    //     ]);
+    // }
+
+    // public function showRegister()
+    // {
+    //     return auth('frontend.register')->with([
+    //         'mainClass' => 'sub_page',
+    //         'title' => 'Đăng Ký',
+    //     ]);
+    // }
+
+    // public function postRegister(Request $request)
+    // {
+    //     $credentials = $request->only('email', 'password');
+    
+    //     if (Auth::attempt($credentials)) {
+    //         Authentication passed...
+    //         return redirect()->intended(route('home_index'));
+    //     }
+    
+    //     return redirect()->back()->withErrors([
+    //         'email' => 'Thông tin đăng nhập không đúng.',
+    //     ]);
+    // }
 }
