@@ -200,7 +200,7 @@
                    Fast Delivery
                 </h5>
                 <p>
-                   variations of passages of Lorem Ipsum available
+                   Tốc độ ngang với tốc độ ánh sáng luôn nhé
                 </p>
              </div>
           </div>
@@ -315,7 +315,7 @@
                    Free Shiping
                 </h5>
                 <p>
-                   variations of passages of Lorem Ipsum available
+                   Không cần trả tiền vì tôi không cho người ship
                 </p>
              </div>
           </div>
@@ -336,7 +336,7 @@
                    Best Quality
                 </h5>
                 <p>
-                   variations of passages of Lorem Ipsum available
+                   Chất lượng luôn đứng đầu từ dưới đi lên
                 </p>
              </div>
           </div>
@@ -360,9 +360,7 @@
                    #NewArrivals
                 </h2>
              </div>
-             <p style="margin-top: 20px;margin-bottom: 30px;">
-                Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
-             </p>
+             <p style="margin-top: 20px;margin-bottom: 30px;">Không có hàng gì mới đâu @@</p>
              <a href="{{ route('frontend.products') }}">
              Shop Now
              </a>
@@ -458,20 +456,18 @@
                 <div class="img_container">
                    <div class="img-box">
                       <div class="img_box-inner">
-                         <img src="{{ asset('themes/fontend/images/client.jpg') }}" alt="">
+                         <img src="{{ asset('themes/fontend/images/Trung.jpg') }}" alt="">
                       </div>
                    </div>
                 </div>
                 <div class="detail-box">
                    <h5>
-                      Anna Trevor
+                      Trung
                    </h5>
                    <h6>
                       Customer
                    </h6>
-                   <p>
-                      Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                   </p>
+                   <p>hàng không tệ như tui nghĩ</p>
                 </div>
              </div>
           </div>
@@ -480,20 +476,18 @@
                 <div class="img_container">
                    <div class="img-box">
                       <div class="img_box-inner">
-                         <img src="{{ asset('themes/fontend/images/client.jpg') }}" alt="">
+                         <img src="{{ asset('themes/fontend/images/Cuong.jpg') }}" alt="">
                       </div>
                    </div>
                 </div>
                 <div class="detail-box">
                    <h5>
-                      Anna Trevor
+                      Cường
                    </h5>
                    <h6>
                       Customer
                    </h6>
-                   <p>
-                      Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                   </p>
+                   <p>Hàng đỉnh quá vừa rẻ vừa ngon</p>
                 </div>
              </div>
           </div>
@@ -502,20 +496,18 @@
                 <div class="img_container">
                    <div class="img-box">
                       <div class="img_box-inner">
-                         <img src="{{ asset('themes/fontend/images/client.jpg') }}" alt="">
+                         <img src="{{ asset('themes/fontend/images/Tin.jpg') }}" alt="">
                       </div>
                    </div>
                 </div>
                 <div class="detail-box">
                    <h5>
-                      Anna Trevor
+                      Tín
                    </h5>
                    <h6>
                       Customer
                    </h6>
-                   <p>
-                      Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                   </p>
+                   <p>Toẹt vời</p>
                 </div>
              </div>
           </div>
