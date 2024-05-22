@@ -136,6 +136,7 @@
                               </svg>
                            </a>
                         </li>
+                        @guest
                         <li class="nav-item">
                            <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
@@ -143,6 +144,15 @@
                         <li class="nav-item">
                            <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
+                        @else
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('logout') }}"
+                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                           </form>
+                        </li>
+                        @endguest
                         <form class="form-inline">
                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                            <i class="fa fa-search" aria-hidden="true"></i>
@@ -230,7 +240,7 @@
       </footer>
       <!-- footer end -->
       <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://gokisoft.com/">Quốc Trung IT lỏ</a>
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://gokisoft.com/">Trung Cường Tín mò tại đây</a>
          </p>
       </div>
       <!-- jQery -->

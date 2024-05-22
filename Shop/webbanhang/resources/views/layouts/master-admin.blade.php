@@ -52,7 +52,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ route('home_index') }}">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -186,7 +186,7 @@
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 d-flex align-items-center">
-                              <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
+                              <li class="breadcrumb-item"><a href="{{ route('home_index') }}" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
                               <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                             </ol>
                           </nav>
