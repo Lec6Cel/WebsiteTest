@@ -1,5 +1,5 @@
 @php
-$title="Trang Quản Trị";
+$title="Trang quản trị";
 @endphp
 
 @extends('layouts.master-admin')

@@ -13,13 +13,14 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home_index');
+Route::get('/home', 'HomeController@index')->middleware('checkPermission');
+
+
 Route::post('/logout', function () {
     Auth::logout();
     return redirect()->route('home_index');
 })->name('logout');
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');

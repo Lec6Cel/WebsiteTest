@@ -55,7 +55,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="{{ route('home_index') }}"><img width="250" src="{{ asset('themes/fontend/images/logo.png') }}" alt="#" /></a>
+                  <a class="navbar-brand" href="{{ route('home_index') }}"><img width="100" src="{{ asset('themes/fontend/images/logo.jpg') }}" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -176,7 +176,7 @@
                <div class="col-md-4">
                    <div class="full">
                       <div class="logo_footer">
-                        <a href="#"><img width="210" src="{{ asset('themes/fontend/images/logo.png') }}" alt="#" /></a>
+                        <a href="#"><img width="210" src="{{ asset('themes/fontend/images/logo.jpg') }}" alt="#" /></a>
                       </div>
                       <div class="information_f">
                         <p><strong>ADDRESS:</strong> 97 Võ Văn </p>
@@ -205,11 +205,11 @@
                         <h3>Lastest News</h3>
                         <ul>
                            <li><a href="#">Account</a></li>
-                           <li><a href="#">Checkout</a></li>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#">Register</a></li>
-                           <li><a href="#">Shopping</a></li>
-                           <li><a href="#">Widget</a></li>
+                           <li><a href="{{ route('frontend.checkout') }}">Checkout</a></li>
+                           <li><a href="{{ route('login') }}">Login</a></li>
+                           <li><a href="{{ route('register') }}">Register</a></li>
+                           <li><a href="{{ route('frontend.products') }}">Shopping</a></li>
+                           <li><a href="">Widget</a></li>
                         </ul>
                      </div>
                   </div>
