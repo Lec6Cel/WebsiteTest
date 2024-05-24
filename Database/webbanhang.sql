@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 14, 2023 lúc 03:12 AM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.0.28
+-- Host: 127.0.0.1
+-- Generation Time: May 21, 2024 at 04:43 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `webbanhang`
+-- Database: `webbanhang`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -34,7 +34,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id`, `name`, `href_param`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `category` (`id`, `name`, `href_param`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -60,7 +60,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -76,17 +76,16 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `feedback`
+-- Dumping data for table `feedback`
 --
 
 INSERT INTO `feedback` (`id`, `fullname`, `email`, `phone_number`, `subject_name`, `note`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'hà phú toàn', 'haphutoan@gmail.com', '0972838671', 'laptop', 'news', 1, '2023-06-14 07:04:59', '2023-06-07 00:08:26'),
-(3, 'Hà Phú Toàn', 'haphutoan@gmail.com', '0972838671', 'Hi', 'Hi', 0, NULL, NULL);
+(1, 'Le Huy Cuong', 'lcee3210@gmail.com', '0765231124', 'May Tinh lo', 'Xin Chao', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -98,7 +97,7 @@ CREATE TABLE `gallery` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -108,7 +107,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -130,7 +129,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -145,7 +144,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `href_param`, `thumbnail`, `content`, `created_at`, `updated_at`, `deleted`) VALUES
@@ -182,7 +181,7 @@ INSERT INTO `news` (`id`, `title`, `href_param`, `thumbnail`, `content`, `create
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -199,19 +198,17 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `fullname`, `email`, `phone_number`, `address`, `note`, `order_date`, `status`, `total_money`) VALUES
-(1, 1, 'Hà Phú Toàn', 'haphutoan@gmail.com', '0972838671', 'Châu Thành Tiền Giang', 'Q9 HCM', '2023-06-07 14:11:35', 1, 720000),
-(2, 1, 'Hà Phú Toàn', 'haphutoan@gmail.com', '0972838671', 'Châu Thành Tiền Giang', 'Q9 HCM', '2023-06-07 14:11:35', 1, 234000),
-(3, NULL, 'Hà Phú Toàn', 'haphutoan@gmail.com', '0972838671', 'Trường mầm non Bé Yêu 2 , ấp Tân Phú 2 , xã Tân Lý Đông , Huyện Châu Thành , Tỉnh Tiền Giang', 'hi', '2023-06-10 03:24:23', -2, 940000),
-(4, NULL, 'Hà Phú Toàn', 'haphutoan@gmail.com', '0972838671', 'Trường mầm non Bé Yêu 2 , ấp Tân Phú 2 , xã Tân Lý Đông , Huyện Châu Thành , Tỉnh Tiền Giang', '1', '2023-06-10 03:28:03', 0, 940000);
+(5, NULL, 'Lê Huy Cường', '2151013011cuong@ou.edu.vn', '0765231124', '083203000010', 'adasdas', '2024-05-16 04:38:30', 0, 800000),
+(6, NULL, 'Le Huy Cuong', 'lcee3210@gmail.com', '0765231124', '316 lo D chung cu Nguyen Thien Thuat', 'Hang tot ma gia lai re', '2024-05-21 14:18:39', 0, 200000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_details`
+-- Table structure for table `order_details`
 --
 
 CREATE TABLE `order_details` (
@@ -224,23 +221,17 @@ CREATE TABLE `order_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `order_details`
+-- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `total_money`) VALUES
-(1, 1, 1, 180000, 2, 360000),
-(2, 1, 1, 180000, 2, 360000),
-(3, 3, 1, 200000, 4, 800000),
-(4, 3, 5, 20000, 3, 60000),
-(5, 3, 7, 20000, 4, 80000),
-(6, 4, 1, 200000, 4, 800000),
-(7, 4, 5, 20000, 3, 60000),
-(8, 4, 7, 20000, 4, 80000);
+(9, 5, 4, 200000, 4, 800000),
+(10, 6, 4, 200000, 1, 200000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_news`
+-- Table structure for table `order_news`
 --
 
 CREATE TABLE `order_news` (
@@ -256,7 +247,7 @@ CREATE TABLE `order_news` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -268,7 +259,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `personal_access_tokens`
+-- Table structure for table `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -287,7 +278,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -305,31 +296,32 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumbnail`, `description`, `created_at`, `updated_at`, `deleted`, `slug`) VALUES
-(1, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(2, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
+(1, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2024-05-15 21:46:46', 0, 'san-pham-1'),
+(2, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
 (3, 1, '43', 213123, 123123, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '234234234', '2023-06-06 17:39:11', '2023-06-06 17:39:11', 1, '43'),
 (4, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(5, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
+(5, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
 (6, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(7, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
+(7, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
 (8, 1, '43', 213123, 123123, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '234234234', '2023-06-06 17:39:11', '2023-06-06 17:39:11', 1, '43'),
 (9, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(10, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
+(10, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
 (11, 1, '43', 213123, 123123, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '234234234', '2023-06-06 17:39:11', '2023-06-06 17:39:11', 1, '43'),
 (12, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(13, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
+(13, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
 (14, 2, 'Acer Nitro', 18000000, 200000, 'https://laptopdeal.vn/wp-content/uploads/2021/06/3-acer-nitro-5-an515-i510300h-8gb-256gb-15-6inch-laptopre-vn-1570749j1442.jpg.png', '<p>Thiết kế gaming bắt mắt, đ&egrave;n nền nhiều m&agrave;u sắc Hiệu năng mạnh mẽ, đ&aacute;p ứng mọi nhu cầu sử dụng - Ryzen 5 5600H RAM 8GB cho đa nhiệm mượt m&agrave;, xử l&iacute; hiệu quả c&ocirc;ng việc Đa dạng cổng kết nối - Type-C, USB 3.0, HDMI, 3.5 mm <strong>121213</strong></p>\r\n\r\n<p><s><strong>123123123123</strong></s></p>', '2023-06-21 08:24:17', '2023-06-06 22:51:10', 0, 'san-pham-1'),
-(15, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 0, 'macbook-pro-2023'),
-(16, 1, '43', 213123, 123123, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '234234234', '2023-06-06 17:39:11', '2023-06-06 17:39:11', 1, '43');
+(15, 1, 'Macbook Pro 2023 New 100%', 420000, 20000, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '2023-06-06 02:18:45', '2023-06-06 17:37:37', 1, 'macbook-pro-2023'),
+(16, 1, '43', 213123, 123123, 'https://no1computer.vn/images/products/2022/11/30/large/acer-nitro-5-rtx-3050-h1_1669799440.jpg', '234234234', '2023-06-06 17:39:11', '2023-06-06 17:39:11', 1, '43'),
+(17, 2, 'MSI Hàng xịn', 200, 1, 'http://127.0.0.1:8000/uploads/5984_katana_gf63_12ve_460vn.jpg', '<p>Ko c&oacute; g&igrave; để b&agrave;n cải</p>', '2024-05-15 21:47:50', '2024-05-15 21:47:50', 0, 'msi-hang-xin');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `role`
+-- Table structure for table `role`
 --
 
 CREATE TABLE `role` (
@@ -338,7 +330,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `role`
+-- Dumping data for table `role`
 --
 
 INSERT INTO `role` (`id`, `name`) VALUES
@@ -348,7 +340,7 @@ INSERT INTO `role` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -367,65 +359,66 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `phone_number`, `address`, `deleted`, `role_id`) VALUES
-(1, 'Hà Phú Toàn', 'haphutoan@gmail.com', NULL, '$2y$10$YvJUrBYRxUUNJSuLM6H42uzzCqtkJ18vM9EKPeGyOD4rZboqZ5WUm', 'Hs5R2Kyr2gjTccdGArx1JTfhsh9CHHAMYWrSUwgVtXk7U7xwDFllXulNs4FS', '2023-06-01 21:15:44', '2023-06-05 23:57:23', '0972838671', 'Tiền Giang', 0, 1),
-(2, 'Hà Phú Toàn', 'htt_9x@yahoo.com', NULL, '$2y$10$YVBLk.Lga601pGYuF9W5p.0OOJXp821nvjAX2JRX5Dbgab1P4Tz5K', NULL, '2023-06-05 23:12:00', '2023-06-05 23:12:00', '0972838671', 'Trường mầm non Bé Yêu 2 , ấp Tân Phú 2 , xã Tân Lý Đông , Huyện Châu Thành , Tỉnh Tiền Giang', 1, 2),
-(3, 'Test', 'haphutoanit@gmail.com', NULL, '$2y$10$t0ZqN5KCgTDnbXczf5ab9uHSjUXe4B6RGSkqYhosRbjpI2PSZO.ZW', NULL, '2023-06-07 02:01:48', '2023-06-07 02:01:48', NULL, '0', 0, 2);
+(6, 'Trung Le', 'trunglee@gmail.com', NULL, '$2y$10$7DAsweHzlAmVLNjsOS7ZWOkY1JwoWI7Dkl81PUeY.FR3N3TMGjPKK', NULL, '2024-05-15 21:45:34', '2024-05-15 21:45:34', NULL, '0', 0, 1),
+(7, 'Tin', 'huynhcongtin@gmail.com', NULL, '$2y$10$eq//ysIcDmkBqgmtGA/uP.RT6ZT.RWHP5glSvMJB430WoH7Sm/ua6', NULL, '2024-05-21 01:40:23', '2024-05-21 01:40:23', NULL, '0', 0, 1),
+(8, 'Cuong', 'lehuycuong020103@gmail.com', NULL, '$2y$10$Z9EGia7PGlduyxpfiBOHg.bKhL9IJ3DIEwQ4ix4FpH9BYIWJXIaPy', NULL, '2024-05-21 02:03:01', '2024-05-21 02:03:01', NULL, '0', 0, 1),
+(9, 'Cuong', 'lcee3210@gmail.com', NULL, '$2y$10$xamthIxVAAu6sPhsafw2iejO1WiAJJt2yKgxmb3sdL0HdWRZGsBfK', 'krJtAVcrrRDD0ICCDfzwHKVUjyjQNBggAWf1q3rCeGACPaJvdwxJBt3mfGDZ', '2024-05-21 07:16:52', '2024-05-21 07:39:49', NULL, '0', 0, 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Chỉ mục cho bảng `feedback`
+-- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`),
   ADD KEY `gallery_product_id_foreign` (`product_id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `orders_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `order_details`
+-- Indexes for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD PRIMARY KEY (`id`),
@@ -433,19 +426,19 @@ ALTER TABLE `order_details`
   ADD KEY `order_details_product_id_foreign` (`product_id`);
 
 --
--- Chỉ mục cho bảng `order_news`
+-- Indexes for table `order_news`
 --
 ALTER TABLE `order_news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Chỉ mục cho bảng `personal_access_tokens`
+-- Indexes for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -453,20 +446,20 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `role`
+-- Indexes for table `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -474,120 +467,125 @@ ALTER TABLE `users`
   ADD KEY `users_role_id_foreign` (`role_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `feedback`
+-- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `order_details`
+-- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `order_news`
+-- AUTO_INCREMENT for table `order_news`
 --
 ALTER TABLE `order_news`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `personal_access_tokens`
+-- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT cho bảng `role`
+-- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `gallery`
+-- Constraints for table `gallery`
 --
 ALTER TABLE `gallery`
+  ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
   ADD CONSTRAINT `gallery_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 --
--- Các ràng buộc cho bảng `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Các ràng buộc cho bảng `order_details`
+-- Constraints for table `order_details`
 --
 ALTER TABLE `order_details`
+  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `order_details_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `order_details_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 --
--- Các ràng buộc cho bảng `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
+  ADD CONSTRAINT `product_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 --
--- Các ràng buộc cho bảng `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`),
   ADD CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
 COMMIT;
 

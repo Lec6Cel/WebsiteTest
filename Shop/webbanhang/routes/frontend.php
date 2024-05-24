@@ -14,6 +14,11 @@ Route::controller(FrontendController::class)
     Route::get('/check-out','showCheckout') -> name('frontend.checkout');
     Route::post('/complete','completeCheckout') -> name('frontend.complete');
 
+    // Route::get('/login', 'showLogin')->name('frontend.login');
+    // Route::post('/login', 'postLogin')->name('frontend.login.post');
+    // Route::get('/register', 'showRegister')->name('frontend.register');
+    // Route::post('/register', 'postRegister')->name('frontend.register.post');
+
 
     //http://127.0.0.1:8000/1-san-pham-1 => SEO google , bing , yahoo
     Route::get('/{id}-{href_param}.phtml','showDetail') -> name('frontend.detail');

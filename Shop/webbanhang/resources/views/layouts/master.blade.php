@@ -55,7 +55,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="{{ route('home_index') }}"><img width="250" src="{{ asset('themes/fontend/images/logo.png') }}" alt="#" /></a>
+                  <a class="navbar-brand" href="{{ route('home_index') }}"><img width="100" src="{{ asset('themes/fontend/images/logo.jpg') }}" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -136,6 +136,23 @@
                               </svg>
                            </a>
                         </li>
+                        @guest
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <!-- Thêm nút đăng ký -->
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                        @else
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('logout') }}"
+                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                           </form>
+                        </li>
+                        @endguest
                         <form class="form-inline">
                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                            <i class="fa fa-search" aria-hidden="true"></i>
@@ -159,12 +176,12 @@
                <div class="col-md-4">
                    <div class="full">
                       <div class="logo_footer">
-                        <a href="#"><img width="210" src="{{ asset('themes/fontend/images/logo.png') }}" alt="#" /></a>
+                        <a href="#"><img width="210" src="{{ asset('themes/fontend/images/logo.jpg') }}" alt="#" /></a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> Tân Lý Đông , Châu Thành , Tiền Giang </p>
-                        <p><strong>TELEPHONE:</strong> +84 972 838 671</p>
-                        <p><strong>EMAIL:</strong> haphutoan@gmail.com</p>
+                        <p><strong>ADDRESS:</strong> 97 Võ Văn </p>
+                        <p><strong>TELEPHONE:</strong> +84 765 231 124</p>
+                        <p><strong>EMAIL:</strong> 2151013011Cuong@ou.edu.vn</p>
                       </div>
                    </div>
                </div>
@@ -188,11 +205,11 @@
                         <h3>Lastest News</h3>
                         <ul>
                            <li><a href="#">Account</a></li>
-                           <li><a href="#">Checkout</a></li>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#">Register</a></li>
-                           <li><a href="#">Shopping</a></li>
-                           <li><a href="#">Widget</a></li>
+                           <li><a href="{{ route('frontend.checkout') }}">Checkout</a></li>
+                           <li><a href="{{ route('login') }}">Login</a></li>
+                           <li><a href="{{ route('register') }}">Register</a></li>
+                           <li><a href="{{ route('frontend.products') }}">Shopping</a></li>
+                           <li><a href="">Widget</a></li>
                         </ul>
                      </div>
                   </div>
@@ -223,7 +240,7 @@
       </footer>
       <!-- footer end -->
       <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://gokisoft.com/">Toan Ha IT</a>
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://gokisoft.com/">Trung Cường Tín mò tại đây</a>
          </p>
       </div>
       <!-- jQery -->

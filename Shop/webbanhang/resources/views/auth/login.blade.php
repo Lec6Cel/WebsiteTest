@@ -43,9 +43,9 @@ $title="Đăng nhập";
               <div class="card-body p-md-5 mx-md-4">
 
                 <div class="text-center">
-                  <img src="https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/336163004_1605945073180741_7122591342665655277_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=sO5NzUzeujUAX_s6LYv&_nc_ht=scontent.fsgn13-3.fna&oh=00_AfDsGXtu_13bJBbCqhj1Qn_2ByzPDyLYCcl32p0cfJBGbw&oe=647F144C"
+                  <img src="{{ asset('themes/fontend/images/logo.jpg') }}"
                     style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Laptop cũ Tiền Giang</h4>
+                  <h4 class="mt-2 mb-4 pb-2">Web Trung Lo</h4>
                 </div>
 
                 <form method="POST" action="{{ route('login') }}">
@@ -97,7 +97,7 @@ $title="Đăng nhập";
                         <div class="row mb-0">
                             <div class="col-md-12 offset-md-12">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    {{ __('login') }}   
                                 </button>
 
                                 @if (Route::has('password.request'))
@@ -113,7 +113,7 @@ $title="Đăng nhập";
             </div>
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">Laptop Cũ Tiền Giang - Chuyên Laptop Giá Rẻ</h4>
+                <h4 class="mb-4">Laptop TrungHongNgu - Chuyên Laptop Giá Rẻ</h4>
                 <p class="small mb-0">Chuyên Laptop xách tay giá rẻ - Bảo hành dài lâu</p>
               </div>
             </div>
