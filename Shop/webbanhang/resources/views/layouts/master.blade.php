@@ -179,7 +179,7 @@
                         <a href="#"><img width="210" src="{{ asset('themes/fontend/images/logo.jpg') }}" alt="#" /></a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 97 Võ Văn </p>
+                        <p><strong>ADDRESS:</strong> 97 Võ Văn Tần</p>
                         <p><strong>TELEPHONE:</strong> +84 765 231 124</p>
                         <p><strong>EMAIL:</strong> 2151013011Cuong@ou.edu.vn</p>
                       </div>
