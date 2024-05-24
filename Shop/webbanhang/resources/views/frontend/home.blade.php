@@ -44,9 +44,7 @@
                             <br>
                             On Everything
                          </h1>
-                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
+                         <p>Từ laptop gaming tới laptop làm việc, máy tính thời thượng, phù hợp với sinh viên và mẹ bầu đang cho con bú </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
                             Shop Now
@@ -69,9 +67,7 @@
                             <br>
                             On Everything
                          </h1>
-                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
+                         <p> Ưu đãi sale cực kỳ hấp dẫn xin mời tất cả mọi người !!!!!                         </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
                             Shop Now

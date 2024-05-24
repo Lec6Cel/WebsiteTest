@@ -8,13 +8,11 @@ $title="Trang quản trị";
 <table class="table mb-0 table-hover align-middle text-nowrap">
     <thead>
         <tr>
-            <th class="border-top-0">Products</th>
-            <th class="border-top-0">License</th>
-            <th class="border-top-0">Support Agent</th>
-            <th class="border-top-0">Technology</th>
-            <th class="border-top-0">Tickets</th>
-            <th class="border-top-0">Sales</th>
-            <th class="border-top-0">Earnings</th>
+            <th class="border-top-0">Thành viên</th>
+            <th class="border-top-0">Vai trò</th>
+            <th class="border-top-0">Công việc thực hiện</th>
+            <th class="border-top-0">MSSV</th>
+
         </tr>
     </thead>
     <tbody>
@@ -22,88 +20,72 @@ $title="Trang quản trị";
             <td>
                 <div class="d-flex align-items-center">
                     <div class="m-r-10"><a
-                            class="btn btn-circle d-flex btn-info text-white">EA</a>
+                            class="btn btn-circle d-flex btn-info text-white">QT</a>
                     </div>
                     <div class="">
-                        <h4 class="m-b-0 font-16">Elite Admin</h4>
+                        <h4 class="m-b-0 font-16">Lê Nguyễn Quốc Trung</h4>
                     </div>
                 </div>
             </td>
-            <td>Single Use</td>
-            <td>John Doe</td>
+            <td>Nhóm trưởng</td>
+            <td>Test plan, test case</td>
             <td>
-                <label class="badge bg-danger">Angular</label>
+                <label class="badge bg-danger">2151013103</label>
             </td>
-            <td>46</td>
-            <td>356</td>
-            <td>
-                <h5 class="m-b-0">$2850.06</h5>
             </td>
         </tr>
         <tr>
             <td>
                 <div class="d-flex align-items-center">
                     <div class="m-r-10"><a
-                            class="btn btn-circle d-flex btn-orange text-white">MA</a>
+                            class="btn btn-circle d-flex btn-orange text-white">HC</a>
                     </div>
                     <div class="">
-                        <h4 class="m-b-0 font-16">Monster Admin</h4>
+                        <h4 class="m-b-0 font-16">Lê Huy Cường</h4>
                     </div>
                 </div>
             </td>
-            <td>Single Use</td>
-            <td>Venessa Fern</td>
+            <td>Coder chính, tester phụ</td>
+            <td>Test case, test tự động</td>
             <td>
-                <label class="badge bg-info">Vue Js</label>
+                <label class="badge bg-info">2151013011</label>
             </td>
-            <td>46</td>
-            <td>356</td>
-            <td>
-                <h5 class="m-b-0">$2850.06</h5>
             </td>
         </tr>
         <tr>
             <td>
                 <div class="d-flex align-items-center">
                     <div class="m-r-10"><a
-                            class="btn btn-circle d-flex btn-success text-white">MP</a>
+                            class="btn btn-circle d-flex btn-success text-white">CT</a>
                     </div>
                     <div class="">
-                        <h4 class="m-b-0 font-16">Material Pro Admin</h4>
+                        <h4 class="m-b-0 font-16">Huỳnh Công Tín</h4>
                     </div>
                 </div>
             </td>
-            <td>Single Use</td>
-            <td>John Doe</td>
+            <td>Người đặc tả</td>
+            <td>Thực hiện test thủ công</td>
             <td>
-                <label class="badge bg-success">Bootstrap</label>
+                <label class="badge bg-success">2151013100</label>
             </td>
-            <td>46</td>
-            <td>356</td>
-            <td>
-                <h5 class="m-b-0">$2850.06</h5>
             </td>
         </tr>
         <tr>
             <td>
                 <div class="d-flex align-items-center">
                     <div class="m-r-10"><a
-                            class="btn btn-circle d-flex btn-purple text-white">AA</a>
+                            class="btn btn-circle d-flex btn-purple text-white">VC</a>
                     </div>
                     <div class="">
-                        <h4 class="m-b-0 font-16">Ample Admin</h4>
+                        <h4 class="m-b-0 font-16">Việc chung</h4>
                     </div>
                 </div>
             </td>
-            <td>Single Use</td>
-            <td>John Doe</td>
+            <td>Làm việc cùng nhau trên github</td>
+            <td>Thực hiện báo cáo</td>
             <td>
-                <label class="badge bg-purple">React</label>
+                <label class="badge bg-purple"></label>
             </td>
-            <td>46</td>
-            <td>356</td>
-            <td>
-                <h5 class="m-b-0">$2850.06</h5>
             </td>
         </tr>
     </tbody>

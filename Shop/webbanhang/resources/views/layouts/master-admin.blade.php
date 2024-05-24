@@ -224,8 +224,8 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                Designed and Developed by <a
-                    href="https://gokisoft.com">GokiSoft</a>.
+                Nguồn học tập <a
+                    href="https://gokisoft.com">tại đây</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
