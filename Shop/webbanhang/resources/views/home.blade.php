@@ -1,4 +1,4 @@
-@php
+    @php
 $title="Trang quản trị";
 @endphp
 
