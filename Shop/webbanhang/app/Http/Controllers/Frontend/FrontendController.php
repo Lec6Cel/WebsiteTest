@@ -211,22 +211,37 @@ class FrontendController extends Controller {
         if(isset($_COOKIE['cart'])) {
             $cartList = json_decode($_COOKIE['cart']);
         }
-
+    
         if($cartList == null || count($cartList) == 0) {
             return redirect()->route('home_index');
         }   
-
-
+    
+        // Kiểm tra dữ liệu nhập vào
+        $validator = Validator::make($request->all(), [
+            'fullname' => 'required',
+            'email' => 'required|email',
+            'phone_number' => 'required',
+            'address' => 'required',
+            'note' => 'required',
+        ]);
+    
+        // Nếu dữ liệu không hợp lệ, redirect về trang thanh toán với thông báo lỗi
+        if ($validator->fails()) {
+            return redirect()->route('home_index')
+                             ->withErrors($validator)
+                             ->withInput();
+        }
+    
         $idList = [];
         foreach ($cartList as $item) {
             $idList[] = $item->id;
         }
-
+    
         $cartItems = DB::table('product')
             ->where('deleted', 0)
             ->whereIn('id', $idList)
             ->get();
-
+    
         $totalMoney = 0;    
         for ($i=0; $i < count($cartItems); $i++) { 
             for ($j=0; $j < count($cartList); $j++) { 
@@ -248,7 +263,7 @@ class FrontendController extends Controller {
             'order_date' => date('Y-m-d H:i:s'),
             'total_money' => $totalMoney,
         ]);
-
+    
         foreach ($cartItems as $item) {
             DB::table('order_details')-> insert([
                 'order_id' => $orderItem -> id,
@@ -258,9 +273,9 @@ class FrontendController extends Controller {
                 'total_money' => $item -> num * $item -> discount,
             ]);
         }
-
+    
         setcookie("cart",'',time(),'/');
-
+    
         return redirect()->route('home_index');
     }
     // public function showLogin()
